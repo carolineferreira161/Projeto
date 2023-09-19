@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: 'Poppins', sans-serif;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,10 +21,67 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.header {
+  background-color: #1C1C1C;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav{
+  background-color: #1C1C1C;
+  color: white;
+  display:flex;
+  justify-content: end;
+}
+
+.image {
+  margin-right: 2px;
+  width: 40px;
+}
+
+.logo{
+  font-weight: 600
+}
+h1 {
+  margin-left:15px;
+}
+.navbar a {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-left: 3.5rem;
+  transition: .2s;
+}
+
+.navbar a:hover ,
+.navbar a.active{
+  color: #989898
+}
+
+header h1 {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+footer {
+  background-color: rgba(28, 28, 28, 0.9);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
